@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace QLBaiviet.Controllers
 {
-    public class HomeController : Controller
+    public class LoginController : Controller
     {
+        // GET: Login
         public ActionResult Index()
         {
             return View();
