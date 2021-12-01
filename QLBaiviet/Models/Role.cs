@@ -11,7 +11,8 @@ namespace QLBaiviet.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,8 +20,12 @@ namespace QLBaiviet.Models
         {
             this.Users = new HashSet<User>();
         }
-    
+
+        [Key]
         public string RoleId { get; set; }
+
+        [Display(Name = "Role")]
+        [Required]
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
